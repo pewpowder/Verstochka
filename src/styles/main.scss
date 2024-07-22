@@ -1,3 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+  --family: 'Chakra Petch', sans-serif;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+
+  --fs-h1: 64px;
+  --fs-h2: 48px;
+  --fs-h3: 40px;
+  --fs-h4: 36px;
+  --fs-h5: 32px;
+  --fs-h6: 28px;
+  --fs-h7: 20px;
+  --fs-h8: 20px;
+  --fs-h9: 18px;
+  --fs-h10: 16px;
+  --fs-h11: 16px;
+  --fs-h12: 14px;
+
+  --fs-body1: 16px;
+  --fs-body2: 14px;
+  --fs-body3: 12px;
+
+  --fs-caption1: 16px;
+  --fs-caption2: 14px;
+  --fs-caption3: 10px;
+
+  --fs-button1: 14px;
+  --fs-button2: 16px;
+
+  --lh-auto: auto;
+  --lh-xxl: 58px;
+  --lh-xl: 44px;
+  --lh-lg: 28px;
+  --lh-md: 20px;
+  --lh-sm: 14px;
+
+  --color-linear: linear-gradient(90deg, rgba(12,186,241,1) 17%, rgba(233,92,233,1) 61%);
+  --color-purple: #CA6AEB;
+  --color-blue: #19B5F1;
+
+  --color-black-100: #18181B;
+  --color-black-50: #252532;
+  --color-grey-1: #B0B0B2;
+  --color-grey-2: #D1D1D1;
+  --color-white: #FFFFFF;
+
+  --color-success: #00C566;
+  --color-error: #FF4747;
+  --color-warning: #FACC15;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -5,10 +62,9 @@
 }
 
 body {
-  background-color: #000;
-  color: #fff;
-}
-
-.main {
-
+  font-family: var(--family), sans-serif; // (sans-serif) So that linter doesn't swear, although it's declared in --family
+  font-size: var(--fs-body1);
+  font-weight: var(--fw-medium);
+  color: var(--color-white);
+  background-color: var(--color-black-100);
 }
