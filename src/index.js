@@ -1,7 +1,4 @@
+import "./js/header"
+
 import "./styles/main.scss"
-
-function printMe() {
-    console.log('I printed you!')
-}
-
-printMe();
+import "./styles/header.scss";

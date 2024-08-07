@@ -5,7 +5,7 @@
 
   --fw-light: 300;
   --fw-regular: 400;
-  --fw-medium: 400;
+  --fw-medium: 500;
   --fw-semi-bold: 600;
   --fw-bold: 700;
 
@@ -40,7 +40,8 @@
   --lh-md: 20px;
   --lh-sm: 14px;
 
-  --color-linear: linear-gradient(90deg, rgba(12,186,241,1) 17%, rgba(233,92,233,1) 61%);
+  --color-linear: linear-gradient(90deg, rgba(12, 186, 241, 1)   17%, rgba(233, 92, 233, 1) 61%);
+  --color-linear-inverse: linear-gradient(90deg, rgba(233, 92, 233, 1) 17%, rgba(12, 186, 241, 1) 61%);
   --color-purple: #CA6AEB;
   --color-blue: #19B5F1;
 
@@ -56,15 +57,90 @@
 }
 
 *, *::before, *::after {
+  font-family: var(--family), sans-serif; // (sans-serif) So that linter doesn't swear, although it's declared in --family
+
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: var(--family), sans-serif; // (sans-serif) So that linter doesn't swear, although it's declared in --family
-  font-size: var(--fs-body1);
-  font-weight: var(--fw-medium);
-  color: var(--color-white);
   background-color: var(--color-black-100);
+
+  font-size: var(--fs-body1);
+  font-weight: var(--fw-regular);
+  color: var(--color-white);
+}
+
+.container {
+  max-width: 1438px;
+  height: 100vh;
+  margin: 0 auto;
+
+  border: 1px solid #fff;
+}
+
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.link {
+  font-size: var(--fs-body1);
+  font-weight: var(--fw-light);
+  color: var(--color-white);
+  line-height: var(--lh-lg);
+  text-decoration: none;
+
+  &.active {
+    font-weight: var(--fw-medium);
+  }
+
+  & .arrow {
+    left: 7px;
+  }
+}
+
+// https://codepen.io/simonbreiter/pen/oLJrKy (long arrow also here)
+.arrow {
+  display: inline-block;
+  position: relative;
+
+  width: 2px;
+  height: 4px;
+
+  span {
+    display: inline-block;
+    position: absolute;
+
+    width: 4px;
+    height: 1px;
+
+    background-color: var(--color-white);
+    transition: transform 200ms ease;
+
+    &:first-of-type {
+      left: 0;
+      transform: rotate(-45deg);
+    }
+
+    &:last-of-type {
+      right: 0;
+      transform: rotate(45deg);
+    }
+  }
+
+  &.open {
+
+    span {
+
+      &:first-of-type {
+        transform: rotate(45deg);
+      };
+
+      &:last-of-type {
+        transform: rotate(-45deg);
+      }
+    }
+  }
 }

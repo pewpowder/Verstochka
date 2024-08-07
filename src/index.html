@@ -9,6 +9,44 @@
     <%= htmlWebpackPlugin.options.custom %>
 </head>
 <body>
-    <div style="color: #fff">Configured webpack</div>
+<div class="container">
+    <div class="wrapper">
+        <header class="header">
+            <img src="./assets/logo.svg" alt="logo VRNas" class="header__logo">
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-list__item">
+                        <a href="#" class="link active">Home</a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a href="#" class="link">About us</a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a href="#" class="link">Service</a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a data-dropdown href="#" class="link">
+                            Page
+                            <span class="arrow">
+                               <span></span>
+                               <span></span>
+                           </span>
+                        </a>
+                    </li>
+                    <li class="header__nav-list__item">
+                        <a data-dropdown href="#" class="link">
+                            Blog
+                            <span class="arrow">
+                               <span></span>
+                               <span></span>
+                           </span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <button class="header__contact-us">Contact us</button>
+        </header>
+    </div>
+</div>
 </body>
 </html>
