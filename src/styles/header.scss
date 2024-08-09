@@ -23,9 +23,10 @@
   }
 
   &__contact-us {
+    display: flow-root;
     position: relative;
     cursor: pointer;
-    background: var(--color-black-100);
+    background: transparent;
     border: none;
     padding: 12px 24px;
 
@@ -33,29 +34,31 @@
     font-weight: var(--fw-light);
     line-height: var(--lh-lg);
     color: var(--color-white);
-    transition: transform 70ms ease-in;
 
     &::before,
     &::after {
-      content: '';
+      content: "";
 
       position: absolute;
-      top: -1px;
-      right: -1px;
-      bottom: -1px;
-      left: -1px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
 
-      z-index: -1;
+      border: 1px solid transparent;
+      transition: all 250ms ease-in;
+
+      mask:  linear-gradient(90deg, #fff 0%, #fff 100%) padding-box, linear-gradient(90deg, #fff 0%, #fff 100%);
+      mask-composite: exclude;
     }
 
     &::before {
-      background: var(--color-linear);
+      background: var(--color-linear) border-box;
     }
 
     &::after {
+      background: var(--color-linear-inverse) border-box;
       opacity: 0;
-      background: var(--color-linear-inverse);
-      transition: opacity 500ms ease-in;
     }
 
     &:hover {
@@ -65,7 +68,7 @@
     }
 
     &:active {
-      transform: scale(1.03); // Create a new stacking context for the parent element (button), so the pseudo-elements start to appear above the parent element, but in this case this is the desired behavior, so I did not change the implementation
+      transform: scale(1.03);
     }
   }
 }
