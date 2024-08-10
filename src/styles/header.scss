@@ -10,7 +10,7 @@
     margin-left: 17px;
   }
 
-  &__nav-list {
+  &__nav__list {
     display: flex;
     align-items: center;
     gap: 64px;
@@ -22,7 +22,7 @@
     }
   }
 
-  &__contact-us {
+  &__contact-us__btn {
     display: flow-root;
     position: relative;
     cursor: pointer;

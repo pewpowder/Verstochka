@@ -1,0 +1,64 @@
+.immerse-vr {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 44px;
+
+  &::after {
+    content: '';
+
+    position: absolute; // relative .container
+    left: 0;
+    top: 26px;
+
+    background: url('/src/assets/grid.svg') no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__description {
+    max-width: 540px;
+    max-height: 316px;
+
+    &__header {
+      font-size: var(--fs-h1);
+      font-weight: var(--fw-semi-bold);
+    }
+
+    &__text {
+      color: var(--color-grey-2);
+      font-size: var(--fs-body1);
+      font-weight: var(--fw-light);
+      line-height: var(--lh-lg);
+    }
+
+    &__btn {
+      border: none;
+      background-image: var(--color-linear);
+      padding: 18px 38px;
+      cursor: pointer;
+
+      font-style: var(--fs-button1);
+      font-weight: var(--fw-bold);
+      line-height: var(--lh-sm);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      &:active {
+        transform: scale(1.03);
+      }
+    }
+  }
+}
+
+.why-choose-us__list {
+  display: flex;
+  justify-content: space-between;
+}

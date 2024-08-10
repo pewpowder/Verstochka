@@ -1,4 +1,5 @@
-import "./js/header"
+import './js/header'
 
-import "./styles/main.scss"
-import "./styles/header.scss";
+import './styles/main.scss'
+import './styles/header.scss'
+import './styles/immerse-vr.scss'

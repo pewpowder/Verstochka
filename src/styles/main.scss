@@ -33,7 +33,6 @@
   --fs-button1: 14px;
   --fs-button2: 16px;
 
-  --lh-auto: auto;
   --lh-xxl: 58px;
   --lh-xl: 44px;
   --lh-lg: 28px;
@@ -58,6 +57,7 @@
 
 *, *::before, *::after {
   font-family: var(--family), sans-serif; // (sans-serif) So that linter doesn't swear, although it's declared in --family
+  color: var(--color-white);
 
   box-sizing: border-box;
   margin: 0;
@@ -69,16 +69,17 @@ body {
 
   font-size: var(--fs-body1);
   font-weight: var(--fw-regular);
-  color: var(--color-white);
 }
 
 .container {
+  position: relative;
+
   max-width: 1438px;
-  height: 100vh;
+  height: 500vh;
   margin: 0 auto;
 
   border: 1px solid #fff;
-  background: url('/src/assets/wave-top-right.svg') no-repeat right top;
+  background: url('/src/assets/wave_top_right.svg') no-repeat right top;
 }
 
 .wrapper {
