@@ -101,12 +101,22 @@
       display: flex;
     }
 
+    &-avatar {
+      width: 51px;
+      height: 51px;
+    }
+
     &-avatar:first-child  {
       margin-left: 2px;
     }
 
     &-avatar:not(:first-child)  {
       margin-left: -13px;
+    }
+
+    &-video {
+      width: 196px;
+      height: 128px;
     }
 
     &-text {
@@ -132,25 +142,34 @@
     }
   }
 
+  &__img-light {
+
+  }
+
   &__img-container {
     position: relative;
     margin-bottom: -5px;
-    
+
     &:after {
       content: '';
 
+      display: block;
+      width: 875px;
+      height: 760px;
+      background: url('/src/assets/light_1.png') no-repeat;
+
+      filter: blur(15px);
+
       position: absolute;
-      left: 0;
-      right: 80px;
-      top: 170px;
-      bottom: 0;
+      top: 0;
+      right: -105px;
       z-index: -1;
-
-
-      background: var(--color-linear-gradient);
-      transform: rotate(-68deg) scale(0.8);
-      filter: blur(130px);
     }
+  }
+
+  &-img {
+    width: 526px;
+    height: 626px;
   }
 }
 
@@ -186,18 +205,24 @@
 
       &:nth-of-type(1) {
         .why-choose-us__list-item-img {
+          width: 69px;
+          height: 45px;
           margin: 10px 0 49px;
         }
       }
 
       &:nth-of-type(2) {
         .why-choose-us__list-item-img {
-         margin: 4px 0 41px 3px;
+          width: 64px;
+          height: 60px;
+          margin: 4px 0 41px 3px;
         }
       }
 
       &:nth-of-type(3) {
         .why-choose-us__list-item-img {
+          width: 70px;
+          height: 70px;
           margin: -2px 0 37px;
         }
       }
