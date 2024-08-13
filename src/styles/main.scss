@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+$gradient: '90deg, rgba(12, 186, 241, 1)   17%, rgba(233, 92, 233, 1) 61%';
+
 :root {
   --family: 'Chakra Petch', sans-serif;
 
@@ -39,8 +41,9 @@
   --lh-md: 20px;
   --lh-sm: 14px;
 
-  --color-linear: linear-gradient(90deg, rgba(12, 186, 241, 1)   17%, rgba(233, 92, 233, 1) 61%);
-  --color-linear-inverse: linear-gradient(90deg, rgba(233, 92, 233, 1) 17%, rgba(12, 186, 241, 1) 61%);
+  --color-linear-gradient: linear-gradient(90deg, #0CBAF1, #E95CE9);
+  --color-linear-gradient-inverse: linear-gradient(90deg, #E95CE9, #0CBAF1);
+  --color-radial-gradient: radial-gradient(circle, #1CC4F9CC, #FE69FECC);
   --color-purple: #CA6AEB;
   --color-blue: #19B5F1;
 
@@ -74,12 +77,13 @@ body {
 .container {
   position: relative;
 
-  max-width: 1438px;
+  max-width: 1439px;
   height: 500vh;
   margin: 0 auto;
 
-  border: 1px solid #fff;
-  background: url('/src/assets/wave_top_right.svg') no-repeat right top;
+  border: 1px solid #fff; // TODO: Если удалить рамку, то mt в .header начинает вести себя странно, почему?
+  background: url('/src/assets/wave_top_right.svg') no-repeat right top,
+              url('/src/assets/wave_bottom_left.svg') no-repeat left bottom;
 }
 
 .wrapper {
@@ -94,7 +98,7 @@ body {
   line-height: var(--lh-lg);
   text-decoration: none;
 
-  &.active {
+  &_active {
     font-weight: var(--fw-medium);
   }
 
@@ -132,7 +136,7 @@ body {
     }
   }
 
-  &.open {
+  &_open {
 
     span {
 

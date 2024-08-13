@@ -8,21 +8,21 @@
     display: flex;
     align-items: center;
     margin-left: 17px;
-  }
 
-  &__nav__list {
-    display: flex;
-    align-items: center;
-    gap: 64px;
+    &-list {
+      display: flex;
+      align-items: center;
+      gap: 64px;
 
-    list-style: none;
+      list-style: none;
 
-    &__item:last-child {
-      margin-left: 9px;
+      &-item:last-child {
+        margin-left: 9px;
+      }
     }
   }
 
-  &__contact-us__btn {
+  &__contact-us-btn {
     display: flow-root;
     position: relative;
     cursor: pointer;
@@ -48,16 +48,16 @@
       border: 1px solid transparent;
       transition: all 250ms ease-in;
 
-      mask:  linear-gradient(90deg, #fff 0%, #fff 100%) padding-box, linear-gradient(90deg, #fff 0%, #fff 100%);
+      mask: linear-gradient(90deg, #fff 0%, #fff 100%) padding-box, linear-gradient(90deg, #fff 0%, #fff 100%);
       mask-composite: exclude;
     }
 
     &::before {
-      background: var(--color-linear) border-box;
+      background: var(--color-linear-gradient) border-box;
     }
 
     &::after {
-      background: var(--color-linear-inverse) border-box;
+      background: var(--color-linear-gradient-inverse) border-box;
       opacity: 0;
     }
 

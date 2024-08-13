@@ -4,13 +4,13 @@ $(document).ready(function(){
     $('.link:not([data-dropdown])').click(function (e) {
         e.preventDefault();
 
-        $('.link').removeClass('active');
-        $(this).addClass('active');
+        $('.link').removeClass('link_active');
+        $(this).addClass('link_active');
     });
 
     $('.link[data-dropdown]').click(function(e) {
         e.preventDefault();
 
-        $(this).find('.arrow').toggleClass('open');
+        $(this).find('.arrow').toggleClass('arrow_open');
     });
 });
