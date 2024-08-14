@@ -1,0 +1,27 @@
+@mixin interactive-gradient-background($event) {
+  position: relative;
+  border: none;
+  background-image: var(--color-linear-gradient-active);
+  z-index: 1;
+
+  &:after {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+
+    background-image: var(--color-linear-gradient-active-inverse);
+    transition: opacity 200ms ease-in;
+    opacity: 0;
+  }
+
+  &:#{$event} {
+    &:after {
+      opacity: 1;
+    }
+  }
+}

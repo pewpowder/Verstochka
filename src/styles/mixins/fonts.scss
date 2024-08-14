@@ -1,0 +1,162 @@
+// Headings
+@mixin h1 {
+  font: {
+    size: var(--fs-h1);
+    weight: var(--fw-semi-bold);
+  }
+}
+
+@mixin h2 {
+  font: {
+    size: var(--fs-h2);
+    weight: var(--fw-semi-bold);
+  }
+  line-height: var(--lh-xxl);
+}
+
+@mixin h3 {
+  font: {
+    size: var(--fs-h3);
+    weight: var(--fw-semi-bold);
+  }
+  line-height: var(--lh-xxl);
+}
+
+@mixin h4 {
+  font: {
+    size: var(--fs-h4);
+    weight: var(--fw-medium);
+  }
+  line-height: var(--lh-xl);
+}
+
+@mixin h5 {
+  font: {
+    size: var(--fs-h5);
+    weight: var(--fw-semi-bold);
+  }
+}
+
+@mixin h6 {
+  font: {
+    size: var(--fs-h6);
+    weight: var(--fw-semi-bold);
+  }
+}
+
+@mixin h7 {
+  font: {
+    size: var(--fs-h7);
+    weight: var(--fw-regular);
+  }
+}
+
+@mixin h8 {
+  font: {
+    size: var(--fs-h8);
+    weight: var(--fw-medium);
+  }
+}
+
+@mixin h9 {
+  font: {
+    size: var(--fs-h9);
+    weight: var(--fw-regular);
+  }
+}
+
+@mixin h10 {
+  font: {
+    size: var(--fs-h10);
+    weight: var(--fw-semi-bold);
+  }
+  line-height: var(--lh-lg);
+}
+
+@mixin h11 {
+  font: {
+    size: var(--fs-h11);
+    weight: var(--fw-semi-bold);
+  }
+}
+
+@mixin h12 {
+  font: {
+    size: var(--fs-h12);
+    weight: var(--fw-regular);
+  }
+}
+
+// Bodies
+@mixin body1 {
+  font: {
+    size: var(--fs-body1);
+    weight: var(--fw-light);
+  }
+  line-height: var(--lh-lg);
+}
+
+@mixin body2 {
+  font: {
+    size: var(--fs-body2);
+    weight: var(--fw-regular);
+  }
+  line-height: var(--lh-lg);
+}
+
+@mixin body3 {
+  font: {
+    size: var(--fs-body3);
+    weight: var(--fw-regular);
+  }
+  line-height: var(--lh-lg);
+}
+
+@mixin body4 {
+  font: {
+    size: var(--fs-body4);
+    weight: var(--fw-regular);
+  }
+  line-height: var(--lh-md);
+}
+
+// Captions
+@mixin caption1 {
+  font: {
+    size: var(--fs-caption1);
+    weight: var(--fw-medium);
+  }
+}
+
+@mixin caption2 {
+  font: {
+    size: var(--fs-caption2);
+    weight: var(--fw-medium);
+  }
+  line-height: var(--lh-md);
+}
+
+@mixin caption3 {
+  font: {
+    size: var(--fs-caption3);
+    weight: var(--fw-medium);
+  }
+  line-height: var(--lh-sm);
+}
+
+// Buttons
+@mixin button1 {
+  font: {
+    size: var(--fs-button1);
+    weight: var(--fw-bold);
+  }
+  line-height: var(--lh-sm);
+}
+
+@mixin button2 {
+  font: {
+    size: var(--fs-button2);
+    weight: var(--fw-light);
+  }
+  line-height: var(--lh-lg);
+}

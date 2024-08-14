@@ -1,3 +1,6 @@
+@import "mixins/fonts";
+@import "mixins/interactive-gradient-background";
+
 .immerse-vr {
   display: flex;
   justify-content: space-between;
@@ -30,54 +33,26 @@
     max-height: 316px;
 
     &-header {
-      font-size: var(--fs-h1);
-      font-weight: var(--fw-semi-bold);
       margin-bottom: 12px;
+      @include h1;
     }
 
     &-text {
       color: var(--color-grey-2);
-      font-size: var(--fs-body1);
-      font-weight: var(--fw-light);
-      line-height: var(--lh-lg);
-
       margin-bottom: 32px;
+
+      @include body1;
     }
 
     &-btn {
-      position: relative;
-      border: none;
-      background-image: var(--color-linear-gradient);
-      padding: 18px 38px;
-      cursor: pointer;
-      z-index: 1;
-
-      font-style: var(--fs-button1);
-      font-weight: var(--fw-bold);
-      line-height: var(--lh-sm);
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
 
-      &:after {
-        content: '';
+      padding: 18px 38px;
+      cursor: pointer;
 
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-
-        background-image: var(--color-linear-gradient-inverse);
-        transition: opacity 200ms ease-in;
-        opacity: 0;
-      }
-
-      &:hover {
-        &:after {
-          opacity: 1;
-        }
-      }
+      @include button1;
+      @include interactive-gradient-background('hover');
 
       &:active {
         transform: scale(1.03);
@@ -142,10 +117,6 @@
     }
   }
 
-  &__img-light {
-
-  }
-
   &__img-container {
     position: relative;
     margin-bottom: -5px;
@@ -178,7 +149,7 @@
   height: 357px;
   background-color: var(--color-black-50);
   border: 1px solid;
-  border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0)) 1;
+  border-image: var(--color-linear-gradient-inactive) 1;
   padding: 42px 63px 53px 63px;
 
   &__list {
@@ -187,19 +158,17 @@
 
     &-item {
       list-style: none;
-      max-width: 325px;
-      padding: 1px 1px;
+      max-width: 323px;
+      //padding: 1px 1px;
 
       &-header {
-        font-size: var(--fs-h7);
-        font-weight: var(--fw-regular);
         margin-bottom: 12px;
+        @include h7;
       }
 
       &-text {
-        font-size: var(--fs-body2);
         color: var(--color-grey-1);
-        line-height: var(--lh-lg);
+        @include body2;
       }
 
 
@@ -207,7 +176,7 @@
         .why-choose-us__list-item-img {
           width: 69px;
           height: 45px;
-          margin: 10px 0 49px;
+          margin: 12px 0 49px;
         }
       }
 
@@ -215,7 +184,7 @@
         .why-choose-us__list-item-img {
           width: 64px;
           height: 60px;
-          margin: 4px 0 41px 3px;
+          margin: 4px 0 42px 4px;
         }
       }
 
@@ -223,7 +192,7 @@
         .why-choose-us__list-item-img {
           width: 70px;
           height: 70px;
-          margin: -2px 0 37px;
+          margin: -1px 0 37px;
         }
       }
     }

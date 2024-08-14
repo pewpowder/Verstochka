@@ -1,0 +1,38 @@
+@mixin interactive-gradient-border($background, $event) {
+  position: relative;
+  cursor: pointer;
+  background: $background;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    border: 1px solid transparent;
+    transition: all 250ms ease-in;
+
+    mask: linear-gradient(90deg, #fff 0%, #fff 100%) padding-box, linear-gradient(90deg, #fff 0%, #fff 100%);
+    mask-composite: exclude;
+  }
+
+  &::before {
+    background: var(--color-linear-gradient-active) border-box;
+  }
+
+  &::after {
+    background: var(--color-linear-gradient-active-inverse) border-box;
+    opacity: 0;
+  }
+
+  &:#{$event} {
+    &:after {
+      opacity: 1;
+    }
+  }
+}
+

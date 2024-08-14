@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+@import "mixins/fonts";
+
 :root {
   --family: 'Chakra Petch', sans-serif;
 
@@ -39,9 +41,9 @@
   --lh-md: 20px;
   --lh-sm: 14px;
 
-  --color-linear-gradient: linear-gradient(90deg, #0CBAF1, #E95CE9);
-  --color-linear-gradient-inverse: linear-gradient(90deg, #E95CE9, #0CBAF1);
-  --color-radial-gradient: radial-gradient(circle, #1CC4F9CC, #FE69FECC);
+  --color-linear-gradient-active: linear-gradient(90deg, #0CBAF1, #E95CE9);
+  --color-linear-gradient-active-inverse: linear-gradient(90deg, #E95CE9, #0CBAF1);
+  --color-linear-gradient-inactive: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
   --color-purple: #CA6AEB;
   --color-blue: #19B5F1;
 
@@ -90,11 +92,9 @@ body {
 }
 
 .link {
-  font-size: var(--fs-body1);
-  font-weight: var(--fw-light);
-  color: var(--color-white);
-  line-height: var(--lh-lg);
   text-decoration: none;
+
+  @include body1;
 
   &_active {
     font-weight: var(--fw-medium);
