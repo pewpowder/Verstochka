@@ -69,7 +69,7 @@
     &-wrapper {
       display: flex;
       align-items: center;
-      gap: 17px;
+      gap: 18px;
     }
 
     &-avatars {
@@ -150,7 +150,7 @@
   background-color: var(--color-black-50);
   border: 1px solid;
   border-image: var(--color-linear-gradient-inactive) 1;
-  padding: 42px 63px 53px 63px;
+  padding: 42px 63px 53px 64px;
 
   &__list {
     display: flex;
