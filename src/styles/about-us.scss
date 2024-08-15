@@ -1,0 +1,113 @@
+@import 'mixins/fonts';
+@import 'mixins/interactive-gradient-background';
+@import 'mixins/gradient-text';
+
+.about-us {
+  display: flex;
+  justify-content: space-between;
+  gap: 80px;
+
+  &__visual-content {
+    position: relative;
+  }
+
+  &__img-container {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+    }
+
+    &::before {
+      width: 885px;
+      height: 785px;
+
+      top: -60px;
+      left: -90px;
+      z-index: -1;
+
+      background: url('/src/assets/light_2.png') no-repeat;
+      filter: blur(15px);
+    }
+
+    &::after {
+      z-index: -2;
+      background: url('/src/assets/person_in_vr_2_bg.png') no-repeat bottom left;
+      bottom: 4px;
+    }
+  }
+
+  &__img {
+    width: 517px;
+    height: 622px;
+    margin-left: 25px;
+  }
+
+  &__video {
+    position: absolute;
+    right: 14px;
+    bottom: -15px;
+  }
+
+  &__description {
+    margin-top: 81px;
+
+    &-caption {
+      margin-bottom: 13px;
+
+      @include caption1;
+      @include gradient-caption;
+    }
+
+    &-header {
+      margin-bottom: 11px;
+
+      @include h2;
+    }
+
+    &-text {
+      margin-bottom: 24px;
+
+      @include body1;
+    }
+
+    &-list {
+      list-style: none;
+
+      margin-bottom: 32px;
+
+      @include body3;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        margin-bottom: 14px;
+
+        &:before {
+          content: '';
+
+          display: block;
+          width: 16px;
+          height: 16px;
+
+          background: url('/src/assets/checkbox.svg') no-repeat;
+        }
+      }
+    }
+
+    &-btn {
+      @include button1;
+      @include interactive-gradient-background('hover');
+    }
+  }
+}

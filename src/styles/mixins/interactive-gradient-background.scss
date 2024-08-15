@@ -1,8 +1,10 @@
 @mixin interactive-gradient-background($event) {
-  position: relative;
-  border: none;
-  background-image: var(--color-linear-gradient-active);
-  z-index: 1;
+  & {
+    position: relative;
+    border: none;
+    background-image: var(--color-linear-gradient-active);
+    z-index: 1;
+  }
 
   &:after {
     content: '';

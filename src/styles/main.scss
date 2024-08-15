@@ -26,7 +26,8 @@
 
   --fs-body1: 16px;
   --fs-body2: 14px;
-  --fs-body3: 12px;
+  --fs-body3: 16px;
+  --fs-body4: 12px;
 
   --fs-caption1: 16px;
   --fs-caption2: 14px;
@@ -78,12 +79,14 @@ body {
   position: relative;
 
   max-width: 1440px;
+  padding: 0 15px;
   height: 500vh;
   margin: 0 auto;
 
-  border: 1px solid #fff; // TODO: Если удалить рамку, то mt в .header начинает вести себя странно, почему?
+  border: 1px solid #fff;
   background: url('/src/assets/wave_top_right.svg') no-repeat right top,
               url('/src/assets/wave_bottom_left.svg') no-repeat left bottom;
+  overflow: hidden;
 }
 
 .wrapper {

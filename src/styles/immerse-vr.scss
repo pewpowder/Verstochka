@@ -5,8 +5,6 @@
   display: flex;
   justify-content: space-between;
 
-  margin-top: 44px;
-
   &::after {
     content: '';
 
@@ -31,6 +29,7 @@
   &__description {
     max-width: 540px;
     max-height: 316px;
+    margin-bottom: 32px;
 
     &-header {
       margin-bottom: 12px;
@@ -38,25 +37,13 @@
     }
 
     &-text {
-      color: var(--color-grey-2);
       margin-bottom: 32px;
-
       @include body1;
     }
 
     &-btn {
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-
-      padding: 18px 38px;
-      cursor: pointer;
-
       @include button1;
       @include interactive-gradient-background('hover');
-
-      &:active {
-        transform: scale(1.03);
-      }
     }
   }
 
@@ -64,7 +51,6 @@
     display: flex;
     align-items: center;
     gap: 74px;
-    margin-top: 32px;
 
     &-wrapper {
       display: flex;
@@ -151,6 +137,7 @@
   border: 1px solid;
   border-image: var(--color-linear-gradient-inactive) 1;
   padding: 42px 63px 53px 64px;
+  margin-bottom: 120px;
 
   &__list {
     display: flex;
@@ -159,7 +146,6 @@
     &-item {
       list-style: none;
       max-width: 323px;
-      //padding: 1px 1px;
 
       &-header {
         margin-bottom: 12px;
@@ -167,7 +153,6 @@
       }
 
       &-text {
-        color: var(--color-grey-1);
         @include body2;
       }
 

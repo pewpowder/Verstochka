@@ -1,0 +1,7 @@
+@mixin gradient-caption {
+  display: inline-block;
+  background-color: var(--color-white);
+  background-image: var(--color-linear-gradient-active);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
