@@ -1,11 +1,14 @@
 @import 'mixins/fonts';
 @import 'mixins/interactive-gradient-background';
 @import 'mixins/gradient-text';
+@import 'mixins/background-light';
 
 .about-us {
   display: flex;
   justify-content: space-between;
   gap: 80px;
+
+  margin-bottom: 165px;
 
   &__visual-content {
     position: relative;
@@ -14,34 +17,19 @@
   &__img-container {
     position: relative;
 
-    &::before,
+    @include background-light('/src/assets/light_2.png', 885px, 785px, -60px, auto, auto, -90px);
+
     &::after {
       content: '';
 
       position: absolute;
       top: 0;
       right: 0;
-      bottom: 0;
+      bottom: 4px;
       left: 0;
 
-    }
-
-    &::before {
-      width: 885px;
-      height: 785px;
-
-      top: -60px;
-      left: -90px;
-      z-index: -1;
-
-      background: url('/src/assets/light_2.png') no-repeat;
-      filter: blur(15px);
-    }
-
-    &::after {
       z-index: -2;
       background: url('/src/assets/person_in_vr_2_bg.png') no-repeat bottom left;
-      bottom: 4px;
     }
   }
 

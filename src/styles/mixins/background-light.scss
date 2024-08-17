@@ -1,0 +1,23 @@
+@mixin background-light($url, $width, $height, $top, $right, $bottom, $left) {
+  & {
+    position: relative;
+  }
+
+  &::before {
+    content: '';
+
+    width: $width;
+    height: $height;
+
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+    z-index: -1;
+
+    filter: blur(15px);
+
+    background: url($url) no-repeat;
+  }
+}

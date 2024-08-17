@@ -17,7 +17,7 @@
     z-index: -1;
 
     background-image: var(--color-linear-gradient-active-inverse);
-    transition: opacity 200ms ease-in;
+    transition: opacity var(--transition-behavior);
     opacity: 0;
   }
 

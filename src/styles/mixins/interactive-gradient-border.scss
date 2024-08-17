@@ -1,6 +1,6 @@
 @mixin interactive-gradient-border($background, $event) {
   & {
-    position: relative;
+    position: relative; // TODO: передавать position из вне, если еще раз пригодится absolute
     cursor: pointer;
     background: $background;
   }
@@ -16,7 +16,7 @@
     bottom: 0;
 
     border: 1px solid transparent;
-    transition: all 250ms ease-in;
+    transition: all var(--transition-behavior);
 
     mask: linear-gradient(90deg, #fff 0%, #fff 100%) padding-box, linear-gradient(90deg, #fff 0%, #fff 100%);
     mask-composite: exclude;

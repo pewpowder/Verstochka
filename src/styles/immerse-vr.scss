@@ -1,5 +1,16 @@
 @import "mixins/fonts";
 @import "mixins/interactive-gradient-background";
+@import "mixins/background-light";
+
+@mixin list-item-img($number, $width, $height, $margin) {
+  &:nth-of-type(#{$number}) {
+    .why-choose-us__list-item-img {
+      width: $width;
+      height: $height;
+      margin: $margin;
+    }
+  }
+}
 
 .immerse-vr {
   display: flex;
@@ -107,21 +118,7 @@
     position: relative;
     margin-bottom: -5px;
 
-    &:after {
-      content: '';
-
-      display: block;
-      width: 875px;
-      height: 760px;
-      background: url('/src/assets/light_1.png') no-repeat;
-
-      filter: blur(15px);
-
-      position: absolute;
-      top: 0;
-      right: -105px;
-      z-index: -1;
-    }
+    @include background-light('/src/assets/light_1.png', 875px, 760px, 0, -105px, auto, auto);
   }
 
   &-img {
@@ -147,7 +144,7 @@
       list-style: none;
       max-width: 323px;
 
-      &-header {
+      &-title {
         margin-bottom: 12px;
         @include h7;
       }
@@ -156,30 +153,9 @@
         @include body2;
       }
 
-
-      &:nth-of-type(1) {
-        .why-choose-us__list-item-img {
-          width: 69px;
-          height: 45px;
-          margin: 12px 0 49px;
-        }
-      }
-
-      &:nth-of-type(2) {
-        .why-choose-us__list-item-img {
-          width: 64px;
-          height: 60px;
-          margin: 4px 0 42px 4px;
-        }
-      }
-
-      &:nth-of-type(3) {
-        .why-choose-us__list-item-img {
-          width: 70px;
-          height: 70px;
-          margin: -1px 0 37px;
-        }
-      }
+      @include list-item-img(1, 69px, 45px, 12px 0 49px);
+      @include list-item-img(2, 64px, 60px, 4px 0 42px 4px);
+      @include list-item-img(3, 70px, 70px, -1px 0 37px);
     }
   }
 }
