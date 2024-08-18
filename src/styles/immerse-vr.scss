@@ -4,7 +4,7 @@
 
 @mixin list-item-img($number, $width, $height, $margin) {
   &:nth-of-type(#{$number}) {
-    .why-choose-us__list-item-img {
+    .features__list-item-img {
       width: $width;
       height: $height;
       margin: $margin;
@@ -127,7 +127,7 @@
   }
 }
 
-.why-choose-us {
+.features {
   position: relative;
   height: 357px;
   background-color: var(--color-black-50);
