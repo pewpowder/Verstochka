@@ -1,5 +1,12 @@
 @import "mixins/interactive-gradient-border";
 @import "mixins/fonts";
+@import "variables/screen-sizes";
+
+@mixin hamburger-menu-bar($number, $width) {
+  &:nth-of-type(#{$number}) {
+    width: $width;
+  }
+}
 
 .header {
   display: flex;
@@ -18,10 +25,6 @@
       gap: 64px;
 
       list-style: none;
-
-      &-item:last-child {
-        margin-left: 11px;
-      }
     }
   }
 
@@ -32,20 +35,72 @@
     @include interactive-gradient-border(transparent, 'hover');
   }
 
+  @media screen and (max-width: $md) {
+    margin: 41px 0 44px;
 
-  @media (max-width: 1200px) {
+    &__contact-us-btn {
+      display: none;
+    }
+
+    &__nav {
+      align-items: center;
+      justify-content: center;
+
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 10;
+
+      width: 100%;
+      height: 100vh;
+      margin-left: 0;
+
+      background-color: var(--color-black-100);
+      transform: translateX(100%);
+      transition: transform var(--transition-behavior);
+
+      &-hamburger-showed {
+        transform: translateX(0);
+      }
+
+      &-list {
+        flex-direction: column;
+        width: inherit;
+
+        &-item {
+          width: 100%;
+          text-align: center;
+
+          &::after {
+            content: '';
+
+            display: block;
+            width: 100%;
+            height: 1px;
+
+            background-color: var(--color-white);
+            opacity: 50%;
+          }
+
+          & > .arrow {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }
 
-.menu {
+.hamburger-menu {
   display: none;
   align-items: center;
   justify-content: center;
 
   width: 32px;
   height: 32px;
+  z-index: 11;
 
-  @include interactive-gradient-border(transparent, 'active');
+  @include interactive-gradient-border(transparent, 'hover');
 
   &__toggle {
     display: none;
@@ -58,25 +113,41 @@
     align-items: end;
     gap: 3px;
 
-    width: 16px;
-    height: 16px;
+    width: 11px;
+    height: 11px;
   }
 
   &__bar {
     display: block;
     background-color: var(--color-white);
     height: 2px;
+    transition: all var(--transition-behavior);
 
-    &:nth-of-type(1) {
-      width: 100%;
+    @include hamburger-menu-bar(1, 100%);
+    @include hamburger-menu-bar(2, 75%);
+    @include hamburger-menu-bar(3, 50%);
+
+    &-hamburger-showed {
+      &:nth-of-type(1) {
+        width: 100%;
+        transform: rotate(45deg) translate(4px, 4px);
+      }
+
+      &:nth-of-type(2) {
+        width: 75%;
+        opacity: 0;
+      }
+
+      &:nth-of-type(3) {
+        width: 100%;
+        transform: rotate(-45deg) translate(3px, -3px);
+      }
     }
+  }
 
-    &:nth-of-type(2) {
-      width: 75%;
-    }
-
-    &:nth-of-type(3) {
-      width: 50%;
+  @media screen and (max-width: $md) {
+    & {
+      display: flex;
     }
   }
 }

@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 @import "mixins/fonts";
+@import "variables/screen-sizes";
 
 :root {
   --family: 'Chakra Petch', sans-serif;
@@ -58,7 +59,7 @@
   --color-error: #FF4747;
   --color-warning: #FACC15;
 
-  --transition-behavior: 200ms ease-in
+  --transition-behavior: 200ms ease-in;
 }
 
 *, *::before, *::after {
@@ -80,7 +81,7 @@ body {
 .container {
   position: relative;
 
-  max-width: 1440px;
+  max-width: $xl;
   padding: 0 15px;
   height: 1000vh;
   margin: 0 auto;

@@ -13,4 +13,9 @@ $(document).ready(function(){
 
         $(this).find('.arrow').toggleClass('arrow_open');
     });
+
+    $('.hamburger-menu__toggle').click(function () {
+        $('.header__nav').toggleClass('header__nav-hamburger-showed');
+        $('.hamburger-menu__bar').toggleClass('hamburger-menu__bar-hamburger-showed');
+    })
 });

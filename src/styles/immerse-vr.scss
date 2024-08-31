@@ -1,6 +1,7 @@
 @import "mixins/fonts";
 @import "mixins/interactive-gradient-background";
 @import "mixins/background-light";
+@import "variables/screen-sizes";
 
 @mixin list-item-img($number, $width, $height, $margin) {
   &:nth-of-type(#{$number}) {
@@ -139,6 +140,7 @@
   &__list {
     display: flex;
     justify-content: space-between;
+    gap: 26px;
 
     &-item {
       list-style: none;

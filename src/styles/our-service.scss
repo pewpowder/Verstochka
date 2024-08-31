@@ -2,11 +2,14 @@
 @import 'mixins/gradient-text';
 @import 'mixins/interactive-gradient-border';
 @import 'mixins/background-light';
+@import "variables/screen-sizes";
 
-@mixin cards-wrapper-margins($number, $margin-top, $margin-right) {
+@mixin card-position($number, $top, $right, $bottom, $left) {
   &:nth-of-type(#{$number}) {
-    margin-top: $margin-top;
-    margin-right: $margin-right;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
   }
 }
 
@@ -39,23 +42,13 @@
   }
 
   &__cards {
-    display: flex;
-
-    &-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-
-      @include cards-wrapper-margins(1, 0, 36px);
-      @include cards-wrapper-margins(2, 57px, 26px);
-      @include cards-wrapper-margins(3, 135px, 0);
-    }
+    position: relative;
   }
 
   &__card {
     display: flex;
     flex-direction: column;
-    position: relative;
+    position: absolute;
 
     width: 379px;
     height: 291px;
@@ -66,6 +59,13 @@
     background-color: var(--color-black-50);
     padding: 38px 32px 25px;
     transition: all var(--transition-behavior);
+
+    @include card-position(1, 0, 0, 0, 0);
+    @include card-position(2, 56px, 0px, 1px, 416px);
+    @include card-position(3, 134px, 0px, 0px, 821px);
+    @include card-position(4, 323px, 0px, 0px, 0px);
+    @include card-position(5, 378px, 0px, 0px, 415px);
+    @include card-position(6, 456px, 0px, 0px, 819px);
 
     &:hover {
       border-image: var(--color-linear-gradient-active) 1;
@@ -117,6 +117,30 @@
       & {
         position: absolute;
         bottom: 30px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $lg) {
+    &__description {
+      flex-direction: column;
+      row-gap: 25px;
+
+      margin-bottom: 25px;
+    }
+
+    &__cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      row-gap: 32px;
+
+      & > .our-service__card {
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
       }
     }
   }
