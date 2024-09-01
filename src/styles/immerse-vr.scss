@@ -119,12 +119,25 @@
     position: relative;
     margin-bottom: -5px;
 
+    display: flex;
+    align-items: end;
+
     @include background-light('/src/assets/light_1.png', 875px, 760px, 0, -105px, auto, auto);
   }
 
-  &-img {
+  &__img {
     width: 526px;
     height: 626px;
+  }
+
+  @media screen and (max-width: $lg) {
+    &__img-container {
+    }
+
+    &__img {
+      width: 354px;
+      height: 422px;
+    }
   }
 }
 
