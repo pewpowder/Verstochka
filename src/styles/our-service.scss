@@ -2,6 +2,7 @@
 @import 'mixins/gradient-text';
 @import 'mixins/interactive-gradient-border';
 @import 'mixins/background-light';
+@import 'mixins/media-queries';
 @import "variables/screen-sizes";
 
 @mixin card-position($number, $top, $right, $bottom, $left) {
@@ -20,7 +21,7 @@
 
     margin-bottom: 46px;
 
-    @include background-light('/src/assets/light_3.png', 613px, 619px, -205px, -140px, auto, auto);
+    @include background-light('/src/assets/desktop/light_3.svg', 613px, 619px, -205px, -140px, auto, auto);
 
     &-caption {
       margin-bottom: 11px;
@@ -121,7 +122,7 @@
     }
   }
 
-  @media screen and (max-width: $lg) {
+  @include desktop {
     &__description {
       flex-direction: column;
       row-gap: 25px;

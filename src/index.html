@@ -14,7 +14,7 @@
 
         <!--        Header       -->
         <header class="header">
-            <img class="logo" src="./assets/logo.svg" alt="VRNas logo">
+            <img class="logo" src="assets/common/logo.svg" alt="VRNas logo">
             <nav class="header__nav">
                 <ul class="header__nav-list">
                     <li class="header__nav-list-item">
@@ -66,7 +66,7 @@
                        Immerse Yourself in Virtual Reality
                    </h1>
                    <p class="immerse-vr__description-text">
-                       Experience Unforgettable Events in VR. Bring your events to <br>
+                       Experience Unforgettable Events in VR. Bring your events to
                        life like never before with our VR services
                    </p>
                    <button class="immerse-vr__description-btn">
@@ -76,17 +76,26 @@
                <div class="immerse-vr__happy-client">
                    <div class="immerse-vr__happy-client-wrapper">
                        <div class="immerse-vr__happy-client-avatars">
-                           <img class="immerse-vr__happy-client-avatar" src="./assets/happy_client_1.png" alt="happy client avatar" >
-                           <img class="immerse-vr__happy-client-avatar" src="./assets/happy_client_2.png" alt="happy client avatar" >
-                           <img class="immerse-vr__happy-client-avatar" src="./assets/happy_client_3.png" alt="happy client avatar" >
+                           <img class="immerse-vr__happy-client-avatar" src="assets/common/happy_client_1.png" alt="happy client avatar" >
+                           <img class="immerse-vr__happy-client-avatar" src="assets/common/happy_client_2.png" alt="happy client avatar" >
+                           <img class="immerse-vr__happy-client-avatar" src="assets/common/happy_client_3.png" alt="happy client avatar" >
                        </div>
                        <p class="immerse-vr__happy-client-text"><span>32k+</span> Happy Client</p>
                    </div>
-                   <img class="immerse-vr__happy-client-video" src="./assets/happy_client_video.png" alt="video">
                </div>
            </div>
-            <div class="immerse-vr__img-container">
-                <img class="immerse-vr__img" src="./assets/person_in_vr_1.png" alt="person in VR">
+            <div class="immerse-vr__visual-content">
+                <div class="immerse-vr__img-container">
+                    <img class="immerse-vr__img"
+                         srcset="assets/mobile/person_in_vr_1.png 237w,
+                                 assets/desktop/person_in_vr_1.png 526w"
+                         sizes="(max-width: 1024px) 237px,
+                                                    526px"
+                         src="assets/desktop/person_in_vr_1.png"
+                         alt="Person in VR"
+                    >
+                </div>
+                <img class="immerse-vr__video" src="./assets/immerse_vr_video.png" alt="immerse vr video">
             </div>
         </div>
 
@@ -121,7 +130,14 @@
         <div class="about-us">
             <div class="about-us__visual-content">
                 <div class="about-us__img-container">
-                    <img class="about-us__img" src="./assets/person_in_vr_2.png" alt="Person in VR">
+                    <img class="about-us__img"
+                         srcset="assets/mobile/person_in_vr_2.png 391w,
+                                 assets/desktop/person_in_vr_2.png 519w"
+                         sizes="(max-width: 1024px) 391px,
+                                                    519px"
+                         src="assets/desktop/person_in_vr_1.png"
+                         alt="Person in VR"
+                    >
                 </div>
                 <img class="about-us__video" src="./assets/about_us_video.jpg" alt="about us video">
             </div>
@@ -173,7 +189,7 @@
             </div>
             <div class="our-service__cards">
                 <div class="our-service__card">
-                    <img class="our-service__card-img" src="./assets/vr_development_icon.svg" alt="VR development icon">
+                    <img class="our-service__card-img" src="assets/common/vr_development_icon.svg" alt="VR development icon">
                     <h4 class="our-service__card-title">VR Development</h4>
                     <p class="our-service__card-text">
                         From concept to creation, our team of VR developers will bring your vision to life.
@@ -183,7 +199,7 @@
                     </a>
                 </div>
                 <div class="our-service__card">
-                    <img class="our-service__card-img" src="./assets/vr_design_icon.svg" alt="VR design icon">
+                    <img class="our-service__card-img" src="assets/common/vr_design_icon.svg" alt="VR design icon">
                     <h4 class="our-service__card-title">VR Design</h4>
                     <p class="our-service__card-text">
                         Our talented VR designers will create immersive and engaging environments that will captivate your audience.
@@ -193,7 +209,7 @@
                     </a>
                 </div>
                 <div class="our-service__card">
-                    <img class="our-service__card-img" src="./assets/vr_consulting_icon.svg" alt="VR consulting icon">
+                    <img class="our-service__card-img" src="assets/common/vr_consulting_icon.svg" alt="VR consulting icon">
                     <h4 class="our-service__card-title">VR Consulting</h4>
                     <p class="our-service__card-text">
                         Our VR consultants will work with you to ensure that your VR experience meets your goals and exceeds your expectations.
@@ -203,7 +219,7 @@
                     </a>
                 </div>
                 <div class="our-service__card">
-                    <img class="our-service__card-img" src="./assets/vr_games_icon.svg" alt="VR games icon">
+                    <img class="our-service__card-img" src="assets/common/vr_games_icon.svg" alt="VR games icon">
                     <h4 class="our-service__card-title">VR Games</h4>
                     <p class="our-service__card-text">
                         We offer a wide selection of VR games that <br>
@@ -214,7 +230,7 @@
                     </a>
                 </div>
                 <div class="our-service__card">
-                    <img class="our-service__card-img" src="./assets/vr_events_icon.svg" alt="VR events icon">
+                    <img class="our-service__card-img" src="assets/common/vr_events_icon.svg" alt="VR events icon">
                     <h4 class="our-service__card-title">VR Events</h4>
                     <p class="our-service__card-text">
                         Make your next event unforgettable with our VR event services.
@@ -224,7 +240,7 @@
                     </a>
                 </div>
                 <div class="our-service__card">
-                    <img class="our-service__card-img" src="./assets/vr_entertainment_icon.svg" alt="VR entertainment icon">
+                    <img class="our-service__card-img" src="assets/common/vr_entertainment_icon.svg" alt="VR entertainment icon">
                     <h4 class="our-service__card-title">VR Entertainment</h4>
                     <p class="our-service__card-text">
                         Create a VR escape room, or offer VR experiences at a theme park, we have the expertise and experience to make it happen.

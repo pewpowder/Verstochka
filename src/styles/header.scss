@@ -1,6 +1,7 @@
 @import "mixins/interactive-gradient-border";
 @import "mixins/fonts";
 @import "variables/screen-sizes";
+@import "mixins/media-queries";
 
 @mixin hamburger-menu-bar($number, $width) {
   &:nth-of-type(#{$number}) {
@@ -17,7 +18,6 @@
   &__nav {
     display: flex;
     align-items: center;
-    margin-left: 18px;
 
     &-list {
       display: flex;
@@ -35,7 +35,7 @@
     @include interactive-gradient-border(transparent, 'hover');
   }
 
-  @media screen and (max-width: $md) {
+  @include laptop {
     margin: 41px 0 44px;
 
     &__contact-us-btn {
@@ -53,7 +53,6 @@
 
       width: 100%;
       height: 100vh;
-      margin-left: 0;
 
       background-color: var(--color-black-100);
       transform: translateX(100%);
@@ -145,7 +144,7 @@
     }
   }
 
-  @media screen and (max-width: $md) {
+  @include laptop {
     & {
       display: flex;
     }

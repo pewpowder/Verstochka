@@ -2,6 +2,7 @@
 @import "mixins/interactive-gradient-background";
 @import "mixins/background-light";
 @import "variables/screen-sizes";
+@import "mixins/media-queries";
 
 @mixin list-item-img($number, $width, $height, $margin) {
   &:nth-of-type(#{$number}) {
@@ -34,14 +35,13 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-
     margin-top: 74px;
   }
 
   &__description {
     max-width: 540px;
     max-height: 316px;
-    margin-bottom: 32px;
+    margin-bottom: 71px;
 
     &-header {
       margin-bottom: 12px;
@@ -63,6 +63,7 @@
     display: flex;
     align-items: center;
     gap: 74px;
+    margin-bottom: 105px;
 
     &-wrapper {
       display: flex;
@@ -87,11 +88,6 @@
       margin-left: -13px;
     }
 
-    &-video {
-      width: 196px;
-      height: 128px;
-    }
-
     &-text {
       color: var(--color-grey-1);
 
@@ -105,7 +101,7 @@
           display: inline-block;
           width: 50px;
           height: 7px;
-          background: url('/src/assets/dash.svg') no-repeat;
+          background: url('/src/assets/common/dash.svg') no-repeat;
 
           position: absolute;
           bottom: 0;
@@ -115,14 +111,19 @@
     }
   }
 
+  &__visual-content {
+    position: relative;
+  }
+
   &__img-container {
     position: relative;
-    margin-bottom: -5px;
+    height: 100%;
 
     display: flex;
+    justify-content: end;
     align-items: end;
 
-    @include background-light('/src/assets/light_1.png', 875px, 760px, 0, -105px, auto, auto);
+    @include background-light('/src/assets/desktop/light_1.svg', 875px, 760px, 0, -105px, auto, auto);
   }
 
   &__img {
@@ -130,19 +131,67 @@
     height: 626px;
   }
 
-  @media screen and (max-width: $lg) {
-    &__img-container {
+  &__video {
+    position: absolute;
+    left: -320px;
+    bottom: 66px;
+
+    width: 196px;
+    height: 128px;
+  }
+
+
+  @include desktop {
+    &__img-container::before {
+      top: 65px;
+      right: -250px;
     }
 
     &__img {
       width: 354px;
-      height: 422px;
+      height: 416px;
+    }
+  }
+
+  @include laptop {
+    flex-direction: column;
+
+    &__wrapper {
+      margin-top: 36px;
+    }
+
+    &__description {
+      margin-bottom: 22px;
+
+      &-header {
+        @include h2();
+      }
+    }
+
+    &__happy-client {
+      margin-bottom: 0;
+
+      &-avatar {
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    &__img-container {
+      left: 134px;
+
+      @include background-light('/src/assets/mobile/light_1.svg', 430px, 649px, -40px, 54px, auto, auto, 40px);
+    }
+
+    &__video {
+      left: 0;
+      bottom: 144px;
     }
   }
 }
 
 .features {
-  position: relative;
   height: 357px;
   background-color: var(--color-black-50);
   border: 1px solid;
@@ -171,6 +220,18 @@
       @include list-item-img(1, 69px, 45px, 12px 0 49px);
       @include list-item-img(2, 64px, 60px, 4px 0 42px 4px);
       @include list-item-img(3, 70px, 70px, -1px 0 37px);
+    }
+  }
+
+  @include laptop {
+    height: 100%;
+    padding: 36px;
+    margin-bottom: 0;
+
+    &__list {
+      flex-direction: column;
+      align-items: center;
+      gap: 51px;
     }
   }
 }

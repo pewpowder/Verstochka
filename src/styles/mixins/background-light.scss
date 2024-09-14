@@ -1,4 +1,4 @@
-@mixin background-light($url, $width, $height, $top, $right, $bottom, $left) {
+@mixin background-light($url, $width, $height, $top, $right, $bottom, $left, $blur: 15px) {
   & {
     position: relative;
   }
@@ -16,7 +16,7 @@
     left: $left;
     z-index: -1;
 
-    filter: blur(15px);
+    filter: blur($blur);
 
     background: url($url) no-repeat;
   }
