@@ -38,6 +38,7 @@
   --fs-button1: 14px;
   --fs-button2: 16px;
 
+  --lh-auto: normal;
   --lh-xxl: 58px;
   --lh-xl: 44px;
   --lh-lg: 28px;
@@ -92,6 +93,9 @@ body {
               url('/src/assets/desktop/wave_bottom_left.svg') no-repeat left bottom;
   overflow: hidden;
 
+  @include tablet {
+    max-width: $sm;
+  }
 
   @include mobile {
     background: url('/src/assets/mobile/wave_top_right.svg') no-repeat right top,
@@ -153,7 +157,7 @@ body {
 
       &:first-of-type {
         transform: rotate(45deg);
-      };
+      }
 
       &:last-of-type {
         transform: rotate(-45deg);

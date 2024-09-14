@@ -141,7 +141,7 @@
   }
 
 
-  @include desktop {
+  @include tablet {
     &__img-container::before {
       top: 65px;
       right: -250px;
@@ -153,7 +153,7 @@
     }
   }
 
-  @include laptop {
+  @include tablet {
     flex-direction: column;
 
     &__wrapper {
@@ -223,10 +223,10 @@
     }
   }
 
-  @include laptop {
+  @include tablet {
     height: 100%;
     padding: 36px;
-    margin-bottom: 0;
+    margin-bottom: 100px;
 
     &__list {
       flex-direction: column;

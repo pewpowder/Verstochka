@@ -4,6 +4,7 @@
     size: var(--fs-h1);
     weight: var(--fw-semi-bold);
   }
+  line-height: var(--lh-auto);
   letter-spacing: -0.2px;
 }
 
@@ -22,6 +23,7 @@
     weight: var(--fw-semi-bold);
   }
   line-height: var(--lh-xxl);
+  letter-spacing: normal;
 }
 
 @mixin h4 {
@@ -30,6 +32,7 @@
     weight: var(--fw-medium);
   }
   line-height: var(--lh-xl);
+  letter-spacing: normal;
 }
 
 @mixin h5 {
@@ -37,6 +40,8 @@
     size: var(--fs-h5);
     weight: var(--fw-semi-bold);
   }
+  line-height: var(--lh-auto);
+  letter-spacing: -0.2px;
 }
 
 @mixin h6 {
@@ -44,6 +49,8 @@
     size: var(--fs-h6);
     weight: var(--fw-semi-bold);
   }
+  line-height: var(--lh-auto);
+  letter-spacing: normal;
 }
 
 @mixin h7 {
@@ -51,6 +58,8 @@
     size: var(--fs-h7);
     weight: var(--fw-regular);
   }
+  line-height: var(--lh-auto);
+  letter-spacing: normal;
 }
 
 @mixin h8 {
@@ -58,6 +67,8 @@
     size: var(--fs-h8);
     weight: var(--fw-medium);
   }
+  line-height: var(--lh-auto);
+  letter-spacing: normal;
 }
 
 @mixin h9 {
@@ -65,6 +76,8 @@
     size: var(--fs-h9);
     weight: var(--fw-regular);
   }
+  line-height: var(--lh-auto);
+  letter-spacing: normal;
 }
 
 @mixin h10 {
@@ -73,6 +86,7 @@
     weight: var(--fw-semi-bold);
   }
   line-height: var(--lh-lg);
+  letter-spacing: normal;
 }
 
 @mixin h11 {
@@ -80,6 +94,8 @@
     size: var(--fs-h11);
     weight: var(--fw-semi-bold);
   }
+  line-height: var(--lh-auto);
+  letter-spacing: normal;
 }
 
 @mixin h12 {
@@ -87,6 +103,8 @@
     size: var(--fs-h12);
     weight: var(--fw-regular);
   }
+  line-height: var(--lh-auto);
+  letter-spacing: normal;
 }
 
 // Bodies
@@ -131,8 +149,8 @@
     size: var(--fs-caption1);
     weight: var(--fw-medium);
   }
-
   text-transform: uppercase;
+  line-height: var(--lh-auto);
   letter-spacing: 2.4px;
 }
 
@@ -142,6 +160,7 @@
     weight: var(--fw-medium);
   }
   line-height: var(--lh-md);
+  letter-spacing: normal;
 }
 
 @mixin caption3 {
@@ -150,6 +169,7 @@
     weight: var(--fw-medium);
   }
   line-height: var(--lh-sm);
+  letter-spacing: normal;
 }
 
 // Buttons
@@ -176,6 +196,7 @@
     weight: var(--fw-light);
   }
   line-height: var(--lh-lg);
+  letter-spacing: normal;
 
   padding: 12px 24px;
   cursor: pointer;

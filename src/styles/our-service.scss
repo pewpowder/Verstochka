@@ -122,12 +122,24 @@
     }
   }
 
-  @include desktop {
+  @include tablet {
     &__description {
       flex-direction: column;
-      row-gap: 25px;
+      row-gap: 12px;
 
       margin-bottom: 25px;
+
+      &::before {
+        display: none; // hide background light
+      }
+
+      &-header {
+        @include h5;
+      }
+
+      &-text {
+        margin-top: 0;
+      }
     }
 
     &__cards {
@@ -144,5 +156,14 @@
         left: 0;
       }
     }
+
+    &__card {
+      width: 398px;
+
+      &-link {
+        bottom: 23px;
+      }
+    }
+
   }
 }

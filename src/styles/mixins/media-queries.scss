@@ -1,12 +1,12 @@
 @import '../variables/screen-sizes';
 
-@mixin desktop {
+@mixin laptop {
   @media screen and (max-width: $lg) {
     @content;
   }
 }
 
-@mixin laptop {
+@mixin tablet {
   @media screen and (max-width: $md) {
     @content;
   }

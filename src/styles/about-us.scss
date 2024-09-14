@@ -42,7 +42,7 @@
 
   &__video {
     position: absolute;
-    right: 14px;
+    left: 332px;
     bottom: -15px;
   }
 
@@ -99,4 +99,46 @@
       @include interactive-gradient-background('hover');
     }
   }
+
+
+  @include laptop {
+    gap: 60px;
+
+    &__description {
+      &-header {
+        @include h5;
+      }
+    }
+  }
+
+  @include tablet {
+    flex-direction: column;
+    margin-bottom: 105px;
+
+    &__img-container {
+      @include background-light('/src/assets/mobile/light_2.svg', 430px, 591px, -30px, auto, auto, -25px);
+
+      &::after {
+        background: url('/src/assets/mobile/person_in_vr_2_bg.png') no-repeat bottom left;
+      }
+    }
+
+    &__img {
+      width: 391px;
+      height: 467px;
+      margin-left: 18px;
+    }
+
+    &__video {
+      width: 147px;
+      height: 96px;
+      left: 250px;
+      bottom: -12px;
+    }
+
+    &__description {
+      margin-top: 0;
+    }
+  }
+
 }

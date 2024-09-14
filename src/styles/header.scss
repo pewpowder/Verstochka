@@ -15,6 +15,10 @@
 
   margin: 30px 0 44px;
 
+  & .logo {
+    margin-right: 6px;
+  }
+
   &__nav {
     display: flex;
     align-items: center;
@@ -35,7 +39,7 @@
     @include interactive-gradient-border(transparent, 'hover');
   }
 
-  @include laptop {
+  @include tablet {
     margin: 41px 0 44px;
 
     &__contact-us-btn {
@@ -144,7 +148,7 @@
     }
   }
 
-  @include laptop {
+  @include tablet {
     & {
       display: flex;
     }
